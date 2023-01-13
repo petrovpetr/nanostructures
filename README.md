@@ -1207,3 +1207,16 @@ $n_1 \cdot \sin \theta_1 = n_2 \cdot \sin \theta_2$
 
 
 
+```python
+F = [0]
+
+for n in range(1, 1000):
+  if n % 3 == 2:
+    F.append(F[n-1] + 1)
+  else:
+    F.append(F[(n - n%3) // 3])
+
+  if F[n] == 6:
+    print(n)
+    break
+```
