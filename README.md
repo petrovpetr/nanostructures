@@ -1220,3 +1220,25 @@ for n in range(1, 1000):
     print(n)
     break
 ```
+
+
+
+Скрытый код:
+
+<details><summary>Скрытый код:</summary>
+
+```python
+F = [0]
+
+for n in range(1, 1000):
+  if n % 3 == 2:
+    F.append(F[n-1] + 1)
+  else:
+    F.append(F[(n - n%3) // 3])
+
+  if F[n] == 6:
+    print(n)
+    break
+```
+
+</details>
